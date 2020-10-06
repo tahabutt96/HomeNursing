@@ -10,19 +10,33 @@
     tools:visibility="visible"
     android:orientation="vertical">
    <ImageView
+       android:id="@+id/imageview"
        android:layout_width="wrap_content"
        android:layout_height="450dp"
        android:src="@drawable/splash_pic" />
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:orientation="horizontal">
+       android:orientation="vertical">
       <TextView
+          android:id="@+id/textview"
           android:textSize="40dp"
           android:gravity="center"
           android:layout_width="match_parent"
           android:layout_height="match_parent"
+          android:fontFamily="sans-serif-black"
           android:text="Home Nursing"/>
+
+      <TextView
+          android:id="@+id/textview2"
+          android:textSize="20dp"
+          android:gravity="center"
+          android:layout_marginTop="50dp"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:fontFamily="sans-serif-black"
+          android:text="On Call with Care"/>
+
    </LinearLayout>
 
 </LinearLayout>
