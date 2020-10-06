@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HomeNursing</string>
+    <string name="textview">TextView</string>
+    <string name="home_nursing">Home Nursing</string>
 </resources>
