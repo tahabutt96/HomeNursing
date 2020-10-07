@@ -23,12 +23,10 @@ public class Login extends AppCompatActivity {
     TextInputLayout username, password;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
 
         callsignup = findViewById(R.id.Signup_screen);
@@ -39,35 +37,43 @@ public class Login extends AppCompatActivity {
         password = findViewById(R.id.password);
         login = findViewById(R.id.login);
 
-        callsignup.setOnClickListener(new View.OnClickListener()
-        {
+        callsignup.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
-                Intent intent = new Intent(Login.this,SignUp.class);
+            public void onClick(View view) {
+                Intent intent = new Intent(Login.this, SignUp.class);
                 startActivity(intent);
                 finish();
 
+                login.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(Login.this, Dashboard.class);
+                        startActivity(intent);
+                        finish();
 
 
-                Pair[] pairs = new Pair[7];
-                pairs[0] = new Pair<View,String>(image, "logo_image");
-                pairs[0] = new Pair<View,String>(logoText, "logo_text");
-                pairs[0] = new Pair<View,String>(sloganText, "slogan_text");
-                pairs[0] = new Pair<View,String>(username, "username_tan");
-                pairs[0] = new Pair<View,String>(password, "password_tan");
-                pairs[0] = new Pair<View,String>(login, "login_tan");
-                pairs[0] = new Pair<View,String>(callsignup, "signup_tan");
+
+                        Pair[] pairs = new Pair[7];
+                        pairs[0] = new Pair<View, String>(image, "logo_image");
+                        pairs[1] = new Pair<View, String>(logoText, "logo_text");
+                        pairs[2] = new Pair<View, String>(sloganText, "slogan_text");
+                        pairs[3] = new Pair<View, String>(username, "username_tan");
+                        pairs[4] = new Pair<View, String>(password, "password_tan");
+                        pairs[5] = new Pair<View, String>(login, "login_tan");
+                        pairs[6] = new Pair<View, String>(callsignup, "signup_tan");
 
 
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(Login.this,pairs);
-                    startActivity(intent,options.toBundle());
-                }
+                        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(Login.this, pairs);
+                            startActivity(intent, options.toBundle());
+                        }
+
+                    }
+                });
 
             }
+
         });
-
-
     }
 }
+
