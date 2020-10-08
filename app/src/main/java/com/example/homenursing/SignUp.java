@@ -17,6 +17,7 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_sign_up);
+
         login = findViewById(R.id.login_again);
 
         login.setOnClickListener(new View.OnClickListener()

@@ -43,36 +43,33 @@ public class Login extends AppCompatActivity {
                 Intent intent = new Intent(Login.this, SignUp.class);
                 startActivity(intent);
                 finish();
-
-                login.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intent = new Intent(Login.this, Dashboard.class);
-                        startActivity(intent);
-                        finish();
-
-
-
-                        Pair[] pairs = new Pair[7];
-                        pairs[0] = new Pair<View, String>(image, "logo_image");
-                        pairs[1] = new Pair<View, String>(logoText, "logo_text");
-                        pairs[2] = new Pair<View, String>(sloganText, "slogan_text");
-                        pairs[3] = new Pair<View, String>(username, "username_tan");
-                        pairs[4] = new Pair<View, String>(password, "password_tan");
-                        pairs[5] = new Pair<View, String>(login, "login_tan");
-                        pairs[6] = new Pair<View, String>(callsignup, "signup_tan");
-
-
-                        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(Login.this, pairs);
-                            startActivity(intent, options.toBundle());
-                        }
-
-                    }
-                });
-
             }
 
+        });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login.this, Dashboard.class);
+                startActivity(intent);
+                finish();
+
+                Pair[] pairs = new Pair[7];
+                pairs[0] = new Pair<View, String>(image, "logo_image");
+                pairs[1] = new Pair<View, String>(logoText, "logo_text");
+                pairs[2] = new Pair<View, String>(sloganText, "slogan_text");
+                pairs[3] = new Pair<View, String>(username, "username_tan");
+                pairs[4] = new Pair<View, String>(password, "password_tan");
+                pairs[5] = new Pair<View, String>(login, "login_tan");
+                pairs[6] = new Pair<View, String>(callsignup, "signup_tan");
+
+
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(Login.this, pairs);
+                    startActivity(intent, options.toBundle());
+                    finish();
+                }
+            }
         });
     }
 }
