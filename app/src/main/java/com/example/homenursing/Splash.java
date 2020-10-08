@@ -54,12 +54,14 @@ public class Splash extends AppCompatActivity {
             @Override
             public void run() {
                 Intent intent = new Intent(Splash.this, Login.class);
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(Splash.this,pairs);
-                    startActivity(intent,options.toBundle());
-                }
+                startActivity(intent);
+                finish();
+//                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+//                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(Splash.this,pairs);
+//                    startActivity(intent,options.toBundle());
+//                }
             }
-        },SPLASH_SCREEN);
+        }, 3000);
     }
 }
 
