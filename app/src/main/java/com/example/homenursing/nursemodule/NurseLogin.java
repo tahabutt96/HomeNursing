@@ -1,4 +1,4 @@
-package com.example.homenursing.loginmodule;
+package com.example.homenursing.nursemodule;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,34 +12,36 @@ import android.widget.TextView;
 
 import com.example.homenursing.Dashboard;
 import com.example.homenursing.R;
+import com.example.homenursing.patientmodule.PatientSignUp;
 import com.google.android.material.textfield.TextInputLayout;
 
-public class PatientLogin extends AppCompatActivity {
+public class NurseLogin extends AppCompatActivity {
 
-    Button forgotpasspatient, callsignup, login;
+    Button callsignup, login, forgotpassnurse;
     ImageView image;
     TextView logoText, sloganText;
     TextInputLayout username, password;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_patient_login);
+        setContentView(R.layout.activity_nurse_login);
 
-        callsignup = findViewById(R.id.Signup_screen_nurse);
+        callsignup = findViewById(R.id.Signup_screen_patient);
         image = findViewById(R.id.Logo_image);
         logoText = findViewById(R.id.logo_name);
         sloganText = findViewById(R.id.slogan_name);
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
+        login = findViewById(R.id.loginnurse);
+        forgotpassnurse = findViewById(R.id.forgotpasswordnurse);
 
-        login = (Button)findViewById(R.id.loginpatient);
-        forgotpasspatient =(Button)findViewById(R.id.forgotpasswordpatient);
-        forgotpasspatient.setOnClickListener(new View.OnClickListener() {
+        forgotpassnurse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PatientLogin.this, Forgotpasswordpatient.class);
+                Intent intent = new Intent(NurseLogin.this, Forgetpasswordnurse.class);
                 startActivity(intent);
                 finish();
             }
@@ -48,7 +50,7 @@ public class PatientLogin extends AppCompatActivity {
         callsignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PatientLogin.this, PatientSignUp.class);
+                Intent intent = new Intent(NurseLogin.this, PatientSignUp.class);
                 startActivity(intent);
                 finish();
             }
@@ -58,10 +60,11 @@ public class PatientLogin extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PatientLogin.this, Dashboard.class);
+                Intent intent = new Intent(NurseLogin.this, Dashboard.class);
                 startActivity(intent);
                 finish();
             }
         });
     }
 }
+

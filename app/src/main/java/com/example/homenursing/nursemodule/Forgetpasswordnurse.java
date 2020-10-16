@@ -1,4 +1,4 @@
-package com.example.homenursing.loginmodule;
+package com.example.homenursing.nursemodule;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,19 +9,18 @@ import android.widget.Button;
 
 import com.example.homenursing.R;
 
-public class Forgotpasswordpatient extends AppCompatActivity {
-
-    Button fn;
+public class Forgetpasswordnurse extends AppCompatActivity {
+    Button fp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forgotpasswordpatient);
+        setContentView(R.layout.activity_forgetpasswordnurse);
 
-        fn = findViewById(R.id.recoverpasspatient);
-        fn.setOnClickListener(new View.OnClickListener() {
+        fp = findViewById(R.id.recoverpassnurse);
+        fp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Forgotpasswordpatient.this, PatientLogin.class);
+                Intent intent = new Intent(Forgetpasswordnurse.this, NurseLogin.class);
                 startActivity(intent);
                 finish();
             }

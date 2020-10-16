@@ -1,4 +1,4 @@
-package com.example.homenursing.loginmodule;
+package com.example.homenursing.defaultmodule;
 
 import androidx.appcompat.app.AppCompatActivity;
 

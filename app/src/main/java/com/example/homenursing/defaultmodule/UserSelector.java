@@ -1,4 +1,4 @@
-package com.example.homenursing.loginmodule;
+package com.example.homenursing.defaultmodule;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.homenursing.R;
+import com.example.homenursing.nursemodule.NurseLogin;
+import com.example.homenursing.patientmodule.PatientLogin;
 
 public class UserSelector extends AppCompatActivity {
 
