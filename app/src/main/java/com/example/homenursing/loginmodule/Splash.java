@@ -1,8 +1,7 @@
-package com.example.homenursing;
+package com.example.homenursing.loginmodule;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -14,11 +13,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.homenursing.R;
+
 public class Splash extends AppCompatActivity {
 
     private static int SPLASH_SCREEN= 5000;
-
-
     //variables
 
     Animation topanim, bottomanim;
@@ -53,7 +52,7 @@ public class Splash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Splash.this, Login.class);
+                Intent intent = new Intent(Splash.this, UserSelector.class);
                 startActivity(intent);
                 finish();
 //                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {

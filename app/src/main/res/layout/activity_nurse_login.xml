@@ -4,23 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login"
+    tools:context=".loginmodule.NurseLogin"
     android:orientation="vertical"
     android:background="#fff"
     android:padding="20dp">
 
-    <ImageView
-        android:id="@+id/Logo_image"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:transitionName="logo_image"
-        android:src="@drawable/download"/>
+<!--    <ImageView-->
+<!--        android:id="@+id/Logo_image"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:transitionName="logo_image"-->
+<!--        android:src="@drawable/download"/>-->
 
     <TextView
         android:id="@+id/logo_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hellow there, Welcome Back"
+        android:text="Login Now"
+        android:layout_gravity="center"
         android:textColor="#000"
         android:transitionName="logo_text"
         android:layout_marginTop="10dp"
@@ -28,6 +29,8 @@
     
     <TextView
         android:id="@+id/slogan_name"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign in to continue"
@@ -85,10 +88,10 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:background="#00000000"
-            android:text="Forget Password?"
-            android:layout_gravity="right"
-            android:elevation="0dp"
-            android:layout_margin="5dp"/>
+            android:text="Forget Password ? "
+            android:textAlignment="textEnd"
+            android:layout_gravity="end"
+            android:elevation="0dp"/>
 
         <Button
             android:id="@+id/login"
@@ -106,7 +109,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00000000"
-            android:text="New User? Sign Up"
+            android:text="New Nurse ? Sign Up"
             android:layout_gravity="right"
             android:textColor="#000"
             android:transitionName="signup_tan"

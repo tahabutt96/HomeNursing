@@ -1,4 +1,4 @@
-package com.example.homenursing;
+package com.example.homenursing.loginmodule;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,9 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
-public class SignUp extends AppCompatActivity {
+import com.example.homenursing.R;
+
+public class PatientSignUp extends AppCompatActivity {
 
     Button login;
 
@@ -16,7 +18,7 @@ public class SignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_patient_sign_up);
 
         login = findViewById(R.id.login_again);
 
@@ -24,7 +26,7 @@ public class SignUp extends AppCompatActivity {
         {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignUp.this, Login.class);
+                Intent intent = new Intent(PatientSignUp.this, NurseLogin.class);
                 startActivity(intent);
                 finish();
             }
