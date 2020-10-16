@@ -95,7 +95,7 @@
             android:elevation="0dp"/>
 
         <Button
-            android:id="@+id/login"
+            android:id="@+id/loginnurse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="LOG In"
@@ -106,7 +106,7 @@
             android:layout_marginBottom="5dp" />
 
         <Button
-            android:id="@+id/Signup_screen"
+            android:id="@+id/Signup_screen_patient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00000000"

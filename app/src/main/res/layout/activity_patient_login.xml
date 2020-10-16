@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".loginmodule.PatientLogin" android:orientation="vertical"
+    tools:context=".loginmodule.PatientLogin"
+    android:orientation="vertical"
     android:background="#fff"
     android:padding="20dp">
 
@@ -94,7 +95,7 @@
             android:elevation="0dp"/>
 
         <Button
-            android:id="@+id/login"
+            android:id="@+id/loginpatient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="LOG In"
@@ -105,7 +106,7 @@
             android:layout_marginBottom="5dp" />
 
         <Button
-            android:id="@+id/Signup_screen"
+            android:id="@+id/Signup_screen_nurse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00000000"

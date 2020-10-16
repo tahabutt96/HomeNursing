@@ -2,10 +2,8 @@ package com.example.homenursing.loginmodule;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -30,19 +28,19 @@ public class NurseLogin extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_nurse_login);
 
-        callsignup = findViewById(R.id.Signup_screen);
+        callsignup = findViewById(R.id.Signup_screen_patient);
         image = findViewById(R.id.Logo_image);
         logoText = findViewById(R.id.logo_name);
         sloganText = findViewById(R.id.slogan_name);
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
-        login = findViewById(R.id.login);
+        login = findViewById(R.id.loginnurse);
         forgotpassnurse = findViewById(R.id.forgotpasswordnurse);
 
         forgotpassnurse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NurseLogin.this, Forgetpassword.class);
+                Intent intent = new Intent(NurseLogin.this, Forgetpasswordnurse.class);
                 startActivity(intent);
                 finish();
             }
@@ -64,22 +62,6 @@ public class NurseLogin extends AppCompatActivity {
                 Intent intent = new Intent(NurseLogin.this, Dashboard.class);
                 startActivity(intent);
                 finish();
-
-                Pair[] pairs = new Pair[7];
-                pairs[0] = new Pair<View, String>(image, "logo_image");
-                pairs[1] = new Pair<View, String>(logoText, "logo_text");
-                pairs[2] = new Pair<View, String>(sloganText, "slogan_text");
-                pairs[3] = new Pair<View, String>(username, "username_tan");
-                pairs[4] = new Pair<View, String>(password, "password_tan");
-                pairs[5] = new Pair<View, String>(login, "login_tan");
-                pairs[6] = new Pair<View, String>(callsignup, "signup_tan");
-
-
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(NurseLogin.this, pairs);
-                    startActivity(intent, options.toBundle());
-                    finish();
-                }
             }
         });
     }
