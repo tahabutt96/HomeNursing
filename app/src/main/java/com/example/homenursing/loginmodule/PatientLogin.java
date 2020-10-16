@@ -18,7 +18,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class PatientLogin extends AppCompatActivity {
 
-    Button callsignup, login;
+    Button forgotpassnurse, callsignup, login;
     ImageView image;
     TextView logoText, sloganText;
     TextInputLayout username, password;
@@ -36,6 +36,15 @@ public class PatientLogin extends AppCompatActivity {
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         login = findViewById(R.id.login);
+        forgotpassnurse = findViewById(R.id.forgotpasswordpatient);
+        forgotpassnurse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PatientLogin.this, Forgetpassword.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         callsignup.setOnClickListener(new View.OnClickListener() {
             @Override
