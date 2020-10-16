@@ -23,7 +23,6 @@ public class UserSelector extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(UserSelector.this, NurseLogin.class);
                 startActivity(intent);
-                finish();
             }
         });
         patientbutt = (Button)findViewById(R.id.patientselector);
@@ -32,7 +31,6 @@ public class UserSelector extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(UserSelector.this, PatientLogin.class);
                 startActivity(intent);
-                finish();
             }
         });
 

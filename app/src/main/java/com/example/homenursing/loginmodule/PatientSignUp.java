@@ -12,7 +12,7 @@ import com.example.homenursing.R;
 
 public class PatientSignUp extends AppCompatActivity {
 
-    Button login;
+    Button loginpatient, signuppatient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +20,22 @@ public class PatientSignUp extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_patient_sign_up);
 
-        login = findViewById(R.id.login_again);
+        loginpatient = findViewById(R.id.login_again);
 
-        login.setOnClickListener(new View.OnClickListener()
+        loginpatient.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(PatientSignUp.this, NurseLogin.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        signuppatient = findViewById(R.id.signuppatient);
+        signuppatient.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent intent = new Intent(PatientSignUp.this, NurseLogin.class);
                 startActivity(intent);
                 finish();
