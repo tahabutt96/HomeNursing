@@ -50,7 +50,7 @@ public class NurseLogin extends AppCompatActivity {
         callsignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NurseLogin.this, PatientSignUp.class);
+                Intent intent = new Intent(NurseLogin.this, NurseSignUp.class);
                 startActivity(intent);
                 finish();
             }
