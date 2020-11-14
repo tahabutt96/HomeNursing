@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".dashboardmodule.patient_dashboard">
-
     <LinearLayout
         android:orientation="vertical"
+        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -15,14 +16,14 @@
             android:layout_marginTop="32dp"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
+            android:gravity="top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-
             <TextView
                 android:id="@+id/Dashboard_text"
                 android:textSize="24sp"
-                android:text="Home Nursing"
+                android:text="Patient Dashboard"
+                android:gravity="center"
                 android:textColor="#000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -36,10 +37,10 @@
 
 
         </RelativeLayout>
-
         <GridLayout
             android:columnCount="2"
             android:rowCount="3"
+            android:layout_gravity="center_vertical"
             android:alignmentMode="alignMargins"
             android:columnOrderPreserved="false"
             android:layout_width="match_parent"
@@ -55,6 +56,13 @@
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
 
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:enabled="true"
+                    android:id="@+id/patient_pharmacy"
+                    android:backgroundTint="@android:color/transparent">
+                </Button>
                 <LinearLayout
                     android:orientation="vertical"
                     android:padding="16dp"
@@ -72,7 +80,82 @@
                         android:layout_marginTop="12dp"
                         android:textColor="#000"
                         android:textSize="18sp"
-                        android:text="Exams"
+                        android:text="Pharmacy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="60dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:enabled="true"
+                    android:id="@+id/nurse_avalibility"
+                    android:backgroundTint="@android:color/transparent">
+                </Button>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:src="@drawable/download"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"/>
+                    <TextView
+                        android:layout_marginTop="12dp"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        android:text="Nurse Avilibility"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="60dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:enabled="true"
+                    android:id="@+id/patientbillbtn"
+                    android:backgroundTint="@android:color/transparent">
+                </Button>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:src="@drawable/download"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"/>
+
+                    <TextView
+                        android:layout_marginTop="12dp"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        android:text="Patient Bill"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -91,7 +174,13 @@
                 app:cardElevation="60dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
-
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:enabled="true"
+                    android:id="@+id/patient_history_btn"
+                    android:backgroundTint="@android:color/transparent">
+                </Button>
                 <LinearLayout
                     android:orientation="vertical"
                     android:padding="16dp"
@@ -109,15 +198,10 @@
                         android:layout_marginTop="12dp"
                         android:textColor="#000"
                         android:textSize="18sp"
-                        android:text="Exams"
+                        android:text="Patient History"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
-
-
                 </LinearLayout>
-
-
-
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
 
@@ -128,7 +212,13 @@
                 app:cardElevation="60dp"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
-
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:enabled="true"
+                    android:id="@+id/patient_feedbackbtn"
+                    android:backgroundTint="@android:color/transparent">
+                </Button>
                 <LinearLayout
                     android:orientation="vertical"
                     android:padding="16dp"
@@ -146,199 +236,11 @@
                         android:layout_marginTop="12dp"
                         android:textColor="#000"
                         android:textSize="18sp"
-                        android:text="Exams"
+                        android:text="Feedback"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
-
-
                 </LinearLayout>
-
-
-
             </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.card.MaterialCardView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="60dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-
-                    <ImageView
-                        android:src="@drawable/download"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"/>
-
-                    <TextView
-                        android:layout_marginTop="12dp"
-                        android:textColor="#000"
-                        android:textSize="18sp"
-                        android:text="Exams"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-
-                </LinearLayout>
-
-
-
-            </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.card.MaterialCardView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="60dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-
-                    <ImageView
-                        android:src="@drawable/download"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"/>
-
-                    <TextView
-                        android:layout_marginTop="12dp"
-                        android:textColor="#000"
-                        android:textSize="18sp"
-                        android:text="Exams"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-
-                </LinearLayout>
-
-
-
-            </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.card.MaterialCardView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="60dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-
-                    <ImageView
-                        android:src="@drawable/download"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"/>
-
-                    <TextView
-                        android:layout_marginTop="12dp"
-                        android:textColor="#000"
-                        android:textSize="18sp"
-                        android:text="Exams"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-
-                </LinearLayout>
-
-
-
-            </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.card.MaterialCardView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="60dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-
-                    <ImageView
-                        android:src="@drawable/download"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"/>
-
-                    <TextView
-                        android:layout_marginTop="12dp"
-                        android:textColor="#000"
-                        android:textSize="18sp"
-                        android:text="Exams"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-
-                </LinearLayout>
-
-
-
-            </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.card.MaterialCardView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="60dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-
-                    <ImageView
-                        android:src="@drawable/download"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"/>
-
-                    <TextView
-                        android:layout_marginTop="12dp"
-                        android:textColor="#000"
-                        android:textSize="18sp"
-                        android:text="Exams"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
         </GridLayout>
 
     </LinearLayout>
