@@ -36,14 +36,14 @@ public class patient_dashboard extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        one = (Button)findViewById(R.id.patientbillbtn);
+        one = (Button)findViewById(R.id.pthree);
         one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(patient_dashboard.this, "This page is under development", Toast.LENGTH_SHORT).show();
             }
         });
-        two = (Button)findViewById(R.id.patient_history_btn);
+        two = (Button)findViewById(R.id.pfour);
         two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,7 +51,7 @@ public class patient_dashboard extends AppCompatActivity {
             }
         });
 
-        three = (Button)findViewById(R.id.patient_feedbackbtn);
+        three = (Button)findViewById(R.id.pfive);
         three.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

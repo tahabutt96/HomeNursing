@@ -38,7 +38,7 @@ public class nurse_dashboard extends AppCompatActivity {
             }
         });
 
-        three = (Button)findViewById(R.id.patient_history_btn);
+        three = (Button)findViewById(R.id.patienthistorybutton);
         three.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +60,6 @@ public class nurse_dashboard extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(nurse_dashboard.this,nurse_feedback.class);
                 startActivity(intent);
-                finish();
             }
         });
     }
