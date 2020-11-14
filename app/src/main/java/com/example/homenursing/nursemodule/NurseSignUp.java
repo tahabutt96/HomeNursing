@@ -28,7 +28,6 @@ public class NurseSignUp extends AppCompatActivity {
         });
 
         loginnurse = findViewById(R.id.login_again);
-
         loginnurse.setOnClickListener(new View.OnClickListener()
         {
             @Override

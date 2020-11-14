@@ -10,9 +10,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.homenursing.Dashboard;
+import com.example.homenursing.dashboardmodule.patient_dashboard;
 import com.example.homenursing.R;
-import com.example.homenursing.patientmodule.PatientSignUp;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class NurseLogin extends AppCompatActivity {
@@ -50,7 +49,7 @@ public class NurseLogin extends AppCompatActivity {
         callsignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NurseLogin.this, PatientSignUp.class);
+                Intent intent = new Intent(NurseLogin.this, NurseSignUp.class);
                 startActivity(intent);
                 finish();
             }
@@ -60,7 +59,7 @@ public class NurseLogin extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NurseLogin.this, Dashboard.class);
+                Intent intent = new Intent(NurseLogin.this, patient_dashboard.class);
                 startActivity(intent);
                 finish();
             }
