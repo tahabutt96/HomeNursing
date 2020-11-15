@@ -36,6 +36,7 @@ public class NurseLogin extends AppCompatActivity {
     ImageView image;
     TextView logoText, sloganText;
     TextInputLayout username, password;
+
     String GEtname,GEtpasword;
     ProgressDialog progress;
     Integer id=0;
