@@ -35,24 +35,21 @@ public class NurseLogin extends AppCompatActivity {
     Button callsignup, login, forgotpassnurse;
     ImageView image;
     TextView logoText, sloganText;
-    TextInputLayout username, password;
+    EditText username, password;
 
     String GEtname,GEtpasword;
     ProgressDialog progress;
     Integer id=0;
-    private static String URL_LOGIN = "https://192.168.0.151/home-nursnig-mobileapp/login.php";
+    private static String URL_LOGIN = "https://99584dc7032a.ngrok.io/home-nursing-mobileapp/nurselogin.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_nurse_login);
 
-        callsignup = findViewById(R.id.Signup_screen_patient);
-        image = findViewById(R.id.Logo_image);
-        logoText = findViewById(R.id.logo_name);
-        sloganText = findViewById(R.id.slogan_name);
-        username = findViewById(R.id.username);
-        password = findViewById(R.id.password);
+        callsignup = findViewById(R.id.Signup_screen_nurse);
+        username = findViewById(R.id.nurse_username);
+        password = findViewById(R.id.nurse_password);
         login = findViewById(R.id.loginnurse);
         forgotpassnurse = findViewById(R.id.forgotpasswordnurse);
 
@@ -84,8 +81,8 @@ public class NurseLogin extends AppCompatActivity {
             public void onClick(View view) {
                 validateUsername();
                 validatePassword();
-                GEtname = username.getEditText().toString().trim();
-                GEtpasword = password.getEditText().toString().trim();
+                GEtname = username.getText().toString().trim();
+                GEtpasword = password.getText().toString().trim();
                 if(!validateUsername()||!validatePassword())
                 {
                     return;
@@ -99,7 +96,7 @@ public class NurseLogin extends AppCompatActivity {
         });
     }
     private boolean validateUsername() {
-        String usernameInput = username.getEditText().toString().trim();
+        String usernameInput = username.getText().toString().trim();
 
         if (usernameInput.isEmpty()) {
             username.setError("Field can't be empty");
@@ -111,7 +108,7 @@ public class NurseLogin extends AppCompatActivity {
         }
     }
     private boolean validatePassword() {
-        String passwordInput = password.getEditText().toString().trim();
+        String passwordInput = password.getText().toString().trim();
 
         if (passwordInput.isEmpty()) {
             password.setError("Field can't be empty");
@@ -145,7 +142,7 @@ public class NurseLogin extends AppCompatActivity {
                             editor.apply();
                             editor.commit();
 
-                            Toast.makeText(NurseLogin.this, ids.toString(), Toast.LENGTH_LONG).show();
+//                            Toast.makeText(NurseLogin.this, ServerResponse, Toast.LENGTH_SHORT).show();
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -175,25 +172,19 @@ public class NurseLogin extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-
-
                         // Showing error message if something goes wrong.
                         Toast.makeText(NurseLogin.this, volleyError.toString(), Toast.LENGTH_LONG).show();
                     }
                 }) {
             @Override
             protected Map<String, String> getParams() {
-
                 // Creating Map String Params.
                 Map<String, String> params = new HashMap<String, String>();
-
-
                 params.put("username", GEtname);
                 params.put("password", GEtpasword);
-
+                //Toast.makeText(NurseLogin.this, params.toString(), Toast.LENGTH_SHORT).show();
                 return params;
             }
-
         };
         // Creating RequestQueue.
         RequestQueue requestQueue = Volley.newRequestQueue(NurseLogin.this);

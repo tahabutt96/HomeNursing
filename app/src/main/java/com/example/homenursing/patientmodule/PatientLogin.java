@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,27 +35,24 @@ import java.util.Map;
 public class PatientLogin extends AppCompatActivity {
 
     Button forgotpasspatient, callsignup, login;
-    ImageView image;
     TextView logoText, sloganText;
-    TextInputLayout username, password;
+    EditText username, password;
 
     String GEtname,GEtpasword;
     ProgressDialog progress;
     Integer id=0;
-    private static String URL_LOGIN = "https://192.168.0.151/home-nursnig-mobileapp/login.php";
+
+    private static String URL_LOGIN = "https://99584dc7032a.ngrok.io/home-nursing-mobileapp/patientlogin.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_patient_login);
 
-        callsignup = findViewById(R.id.Signup_screen_nurse);
-        image = findViewById(R.id.Logo_image);
-        logoText = findViewById(R.id.logo_name);
-        sloganText = findViewById(R.id.slogan_name);
-        username = findViewById(R.id.username);
-        password = findViewById(R.id.password);
-        login = (Button)findViewById(R.id.loginpatient);
+        callsignup = findViewById(R.id.Signup_screen_patient);
+        username = findViewById(R.id.patient_username);
+        password = findViewById(R.id.patient_password);
+        login = findViewById(R.id.loginpatient);
 
         forgotpasspatient =(Button)findViewById(R.id.forgotpasswordpatient);
         forgotpasspatient.setOnClickListener(new View.OnClickListener() {
@@ -85,8 +83,8 @@ public class PatientLogin extends AppCompatActivity {
             public void onClick(View view) {
                 validateUsername();
                 validatePassword();
-                GEtname = username.getEditText().toString().trim();
-                GEtpasword = password.getEditText().toString().trim();
+                GEtname = username.getText().toString().trim();
+                GEtpasword = password.getText().toString().trim();
                 if(!validateUsername()||!validatePassword())
                 {
                     return;
@@ -100,7 +98,7 @@ public class PatientLogin extends AppCompatActivity {
         });
     }
     private boolean validateUsername() {
-        String usernameInput = username.getEditText().toString().trim();
+        String usernameInput = username.getText().toString().trim();
 
         if (usernameInput.isEmpty()) {
             username.setError("Field can't be empty");
@@ -112,7 +110,7 @@ public class PatientLogin extends AppCompatActivity {
         }
     }
     private boolean validatePassword() {
-        String passwordInput = password.getEditText().toString().trim();
+        String passwordInput = password.getText().toString().trim();
 
         if (passwordInput.isEmpty()) {
             password.setError("Field can't be empty");

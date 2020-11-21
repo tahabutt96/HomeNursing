@@ -9,12 +9,6 @@
     android:background="#fff"
     android:padding="20dp">
 
-    <ImageView
-        android:id="@+id/Logo_image"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:transitionName="logo_image"
-        android:src="@drawable/download"/>
 
     <TextView
         android:id="@+id/logo_name"
@@ -43,97 +37,126 @@
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/name"
-            android:hint="Full Name"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text">
-
-            </com.google.android.material.textfield.TextInputEditText>
-
-
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/new_username"
-            android:hint="Username"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:transitionName="username_tan">
-
-            </com.google.android.material.textfield.TextInputEditText>
-
-
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/email"
-            android:hint="Email"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress">
-
-            </com.google.android.material.textfield.TextInputEditText>
-
-
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/phoneNo"
-            android:hint="Phone No"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number">
-
-            </com.google.android.material.textfield.TextInputEditText>
-
-
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/new_password"
-            android:hint="Password"
+            android:layout_marginTop="30dp"
             app:passwordToggleEnabled="true"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
+            android:layout_gravity="center">
+            <EditText
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/patient_name"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:transitionName="password_tan"
-                android:inputType="textPassword">
-
-
-            </com.google.android.material.textfield.TextInputEditText>
-
-
-
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:autofillHints="Username"
+                android:hint="Username"
+                android:inputType="text"
+                android:selectAllOnFocus="true" />
         </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:layout_gravity="center">
+            <EditText
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/patient_email"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:autofillHints="Email"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:selectAllOnFocus="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:layout_gravity="center">
+            <EditText
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/patient_password"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:autofillHints="Password"
+                android:hint="Password"
+                android:imeActionLabel="Sign in"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:selectAllOnFocus="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:layout_gravity="center">
+            <EditText
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/patient_cpassword"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:autofillHints="Confirm Password"
+                android:hint="Confirm Password"
+                android:imeActionLabel="Sign in"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:selectAllOnFocus="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/gendetext"
+                android:layout_width="180dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#334747"
+                android:text="Select your Gender"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <RadioGroup
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/patient_gender_radiogroup"
+            android:layout_width="287dp"
+            android:layout_height="46dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gendetext">
+
+            <RadioButton
+                android:id="@+id/patient_rmale"
+                android:layout_width="74dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="10dp"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/patient_rfemale"
+                android:layout_width="91dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="10dp"
+                android:text="Female" />
+
+            <RadioButton
+                android:id="@+id/patient_rother"
+                android:layout_width="82dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="10dp"
+                android:text="Other" />
+
+        </RadioGroup>
 
 
         <Button
@@ -148,7 +171,7 @@
             android:layout_marginBottom="5dp" />
 
         <Button
-            android:id="@+id/login_again"
+            android:id="@+id/patient_login_again"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00000000"
