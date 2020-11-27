@@ -42,7 +42,7 @@ public class PatientLogin extends AppCompatActivity {
     ProgressDialog progress;
     Integer id=0;
 
-    private static String URL_LOGIN = "https://99584dc7032a.ngrok.io/home-nursing-mobileapp/patientlogin.php";
+    private static String URL_LOGIN = "https://b5afd60a782a.ngrok.io/home-nursing-mobileapp/patientlogin.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

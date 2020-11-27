@@ -47,7 +47,7 @@ public class NurseSignUp extends AppCompatActivity {
     RadioButton male,female,other;
     ProgressDialog progress;
 
-    private static String URL = "https://99584dc7032a.ngrok.io/home-nursing-mobileapp/nurseregister.php";
+    private static String URL = "https://b5afd60a782a.ngrok.io/home-nursing-mobileapp/nurseregister.php";
     Button signupnurse,loginnurse;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

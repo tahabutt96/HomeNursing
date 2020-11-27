@@ -48,7 +48,7 @@ public class PatientSignUp extends AppCompatActivity {
     EditText username,email,password,confirmpassword;
     RadioButton male,female,other;
     ProgressDialog progress;
-    private static String URL = "https://99584dc7032a.ngrok.io/home-nursing-mobileapp/patientregister.php";
+    private static String URL = "https://b5afd60a782a.ngrok.io/home-nursing-mobileapp/patientregister.php";
     Button loginpatient, signuppatient;
 
     @Override
