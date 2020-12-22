@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/useraccount"
+            android:icon="@drawable/ic_baseline_account_circle"
+            android:title="User Account"/>
+        <item
+            android:id="@+id/notification"
+            android:icon="@drawable/ic_baseline_notifications"
+            android:title="Notifications"/>
+    </group>
+    <item android:title="In Case of Emergency">
+        <menu>
+            <item
+                android:id="@+id/nearbyhospt"
+                android:icon="@drawable/ic_baseline_local_hospital"
+                android:title="Nearby Hospitals"/>
+            <item
+                android:id="@+id/emergencycall"
+                android:icon="@drawable/ic_baseline_call"
+                android:title="Emergency Call"/>
+        </menu>
+    </item>
+    <group>
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/ic_baseline_perm_contact_calendar"
+            android:title="Contact Us"/>
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_baseline_settings"
+            android:title="Logout"/>
+    </group>
+</menu>

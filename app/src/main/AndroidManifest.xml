@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.homenursing">
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -26,9 +27,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".nurse_avilibility.nurse_category"></activity>
+        <activity android:name=".common.emergencycall"></activity>
+        <activity android:name=".common.nearbymedicalstore" />
+        <activity android:name=".accountmodule.patient_account" />
+        <activity android:name=".accountmodule.nurse_account" />
+        <activity android:name=".common.contact_us" />
+        <activity android:name=".common.notifications" />
+        <activity android:name=".navigation.navigation_header_patient" />
+        <activity android:name=".navigation.navigation_header_nurse" />
+        <activity android:name=".nurse_avilibility.nurse_category" />
         <activity android:name=".nurse_avilibility.nurse_list" />
-        <activity android:name=".dashboardmodule.nurse_dashboard" />
+        <activity android:name=".dashboardmodule.nurse_dashboard">
+
+        </activity>
         <activity android:name=".pharmacymodule.pharmacy_details" />
         <activity android:name=".pharmacymodule.pharmacy_List" />
         <activity android:name=".exammodule.nurse_exam" />
@@ -46,7 +57,7 @@
         <activity android:name=".nursemodule.NurseLogin" />
         <activity
             android:name=".defaultmodule.Splash"
-            android:noHistory="true">
+            android:noHistory="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

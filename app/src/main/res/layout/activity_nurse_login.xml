@@ -90,6 +90,7 @@
             android:background="#00000000"
             android:text="Forget Password ? "
             android:textAlignment="textEnd"
+            android:paddingEnd="30dp"
             android:layout_gravity="end"
             android:elevation="0dp"/>
 
